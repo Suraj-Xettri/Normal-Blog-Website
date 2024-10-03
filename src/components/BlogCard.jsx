@@ -2,14 +2,12 @@ import React from 'react';
 
 const BlogCard = ({ post }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
+    <div className="bg-white shadow-md rounded-lg overflow-hidden">
       <img className="w-full h-48 object-cover" src={post.image} alt={post.title} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{post.title}</div>
-        <p className="text-gray-700 text-base">
-          {post.description.substring(0, 100)}...
-        </p>
-        <a href={`/post/${post.id}`} className="text-blue-500 hover:text-blue-800">
+      <div className="p-6">
+        <h3 className="text-2xl font-bold mb-2">{post.title}</h3>
+        <p className="text-gray-700 mb-4">{post.description.substring(0, 100)}...</p>
+        <a href={`/blog/${post.id}`} className="text-blue-600 hover:text-blue-800">
           Read More
         </a>
       </div>
