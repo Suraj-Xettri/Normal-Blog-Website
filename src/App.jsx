@@ -1,10 +1,9 @@
-
+import BlogList from "./components/BlogList"
 function App() {
-
   return (
-    <div className="text-red-500 text-4xl">
-        <p>Help</p>
-    </div>
+    <div className="bg-gray-100 min-h-screen">
+    <BlogList />
+  </div>
   )
 }
 
