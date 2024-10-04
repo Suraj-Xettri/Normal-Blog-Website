@@ -3,18 +3,37 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-sky-700 shadow-md py-4">
-      <nav className="container mx-auto flex justify-between items-center px-6 text-white">
-        <div className="text-2xl font-bold">
-          <Link to="/">My Modern Blog</Link>
-        </div>
-        <ul className="flex space-x-8">
-          <li><Link to="/" className="hover:text-gray-300 px-3 py-2">Home</Link></li>
-          <li><Link to="/about" className="hover:text-gray-300 px-3 py-2">About</Link></li>
-          <li><Link to="/blog" className="hover:text-gray-300 px-3 py-2">Blog</Link></li>
+    <nav className="fixed top-0 w-full bg-black bg-opacity-30 backdrop-blur-sm py-4 z-10">
+      <div className="container mx-auto flex justify-between items-center px-6">
+        <h1 className="text-2xl font-bold text-white">My Blog</h1>
+        <ul className="flex space-x-6">
+          <li>
+            <Link
+              to="/"
+              className="text-white font-semibold hover:text-sky-500 transition"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="text-white font-semibold hover:text-sky-500 transition"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/blog"
+              className="text-white font-semibold hover:text-sky-500 transition"
+            >
+              Blog
+            </Link>
+          </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 

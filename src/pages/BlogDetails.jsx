@@ -7,19 +7,19 @@ const blogPosts = [
     id: 1,
     title: "How to Stay Productive",
     content: "Here is the full content of the blog post about productivity. You can replace this with your own content.",
-    image: "https://source.unsplash.com/1600x900/?productivity",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzdvzzLU9G-fZmG_UoAPqLtMrTcvoIXmgDRA&s",
   },
   {
     id: 2,
     title: "The Future of Technology",
     content: "Here is the full content of the blog post about technology's future.",
-    image: "https://source.unsplash.com/1600x900/?technology",
+    image: "https://i.ytimg.com/vi/t46W-vnWJYA/sddefault.jpg",
   },
   {
     id: 3,
     title: "A Guide to Remote Work",
     content: "Here is the full content of the blog post about remote work.",
-    image: "https://source.unsplash.com/1600x900/?remote,work",
+    image: "https://manilarecruitment.com/wp-content/uploads/2021/11/Manila-Recruitment-Info34Banner-800x400-1.png",
   },
 ];
 
@@ -32,10 +32,10 @@ const BlogDetails = () => {
   }
 
   return (
-    <div className="container mx-auto py-16 px-6">
+    <div className="container flex flex-col justify-center items-center mx-auto py-16 px-6">
       <h1 className="text-4xl font-bold text-sky-700 mb-8">{post.title}</h1>
       <img
-        className="w-full h-96 object-cover mb-8 rounded-lg"
+        className="h-96 object-cover mb-8 rounded-lg"
         src={post.image}
         alt={post.title}
       />

@@ -7,19 +7,19 @@ const blogPosts = [
     id: 1,
     title: "How to Stay Productive",
     description: "Productivity is key to achieving your goals. In this blog, we explore tips and tricks to help you stay focused and productive throughout your day.",
-    image: "https://source.unsplash.com/600x400/?productivity",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzdvzzLU9G-fZmG_UoAPqLtMrTcvoIXmgDRA&s",
   },
   {
     id: 2,
     title: "The Future of Technology",
     description: "Technology is evolving faster than ever before. Here's a look at where we're headed and what to expect in the coming years.",
-    image: "https://source.unsplash.com/600x400/?technology",
+    image: "https://i.ytimg.com/vi/t46W-vnWJYA/sddefault.jpg",
   },
   {
     id: 3,
     title: "A Guide to Remote Work",
     description: "Remote work has become the new norm. This guide will walk you through best practices for staying productive while working from home.",
-    image: "https://source.unsplash.com/600x400/?remote,work",
+    image: "https://manilarecruitment.com/wp-content/uploads/2021/11/Manila-Recruitment-Info34Banner-800x400-1.png",
   },
 ];
 
