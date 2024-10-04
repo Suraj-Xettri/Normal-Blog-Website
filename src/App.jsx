@@ -6,6 +6,7 @@ import BlogList from './components/BlogList';
 import Hero from './components/Hero';
 import About from './pages/About';
 import BlogDetails from './pages/BlogDetails';
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<><Hero /><BlogList /></>} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
         </Routes>
         <Footer />

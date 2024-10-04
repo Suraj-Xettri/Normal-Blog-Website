@@ -1,7 +1,6 @@
 import React from 'react';
 import BlogCard from './BlogCard';
 
-// Sample blog data (Replace with real data or fetch from an API)
 const blogPosts = [
   {
     id: 1,
@@ -23,18 +22,31 @@ const blogPosts = [
   },
 ];
 
-const BlogList = () => {
+const Blog = () => {
   return (
-    <div className="container mx-auto py-16 px-6">
-      <h1 className="text-4xl font-bold text-sky-700 mb-8 text-center">Latest Blogs</h1>
+    <div className="bg-gray-50 min-h-screen">
+      {/* Hero Section */}
+      <div className="bg-sky-700 text-white py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-5xl font-bold mb-4">Our Blog</h1>
+          <p className="text-xl mb-8">
+            Stay updated with the latest tips, trends, and stories in the world of technology, productivity, and remote work.
+          </p>
+        </div>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
+      {/* Blog Posts Section */}
+      <div className="container mx-auto py-16 px-6">
+        <h2 className="text-4xl font-bold text-sky-700 mb-12 text-center">Latest Blog Posts</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {blogPosts.map((post) => (
+            <BlogCard key={post.id} post={post} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default BlogList;
+export default Blog;
