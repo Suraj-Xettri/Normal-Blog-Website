@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -8,9 +9,9 @@ const Hero = () => {
   <div className="bg-black bg-opacity-50 backdrop-blur-md text-white p-10 rounded-lg">
     <h1 className="text-5xl font-bold mb-4">Explore the Latest Trends in Tech and Lifestyle</h1>
     <p className="text-lg mb-6">Stay ahead with our top stories, handpicked just for you.</p>
-    <a href="/featured" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+    <Link to="/blog/1" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
       Discover Now
-    </a>
+    </Link>
   </div>
 </section>
 

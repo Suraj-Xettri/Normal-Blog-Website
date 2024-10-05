@@ -47,7 +47,7 @@ const BlogDetails = () => {
   }
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="py-12">
       {/* Blog Feature Image */}
       <div className="w-full h-96 bg-cover bg-center" style={{ backgroundImage: `url(${blog.image})` }}></div>
       
