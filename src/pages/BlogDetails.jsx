@@ -1,46 +1,74 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-// Example blog data (replace with real data or fetch from an API)
+// Example blog data (this would typically come from an API or state)
 const blogPosts = [
   {
-    id: 1,
-    title: "How to Stay Productive",
-    content: "Here is the full content of the blog post about productivity. You can replace this with your own content.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzdvzzLU9G-fZmG_UoAPqLtMrTcvoIXmgDRA&s",
+    id: '1',
+    title: 'The Future of Technology: What\'s Next?',
+    author: 'John Doe',
+    date: 'September 29, 2024',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+    content: `
+      As technology continues to evolve, the future holds many exciting possibilities.
+      From AI advancements to breakthroughs in healthcare, the next decade promises
+      to be transformative in ways we can hardly imagine. One of the most anticipated
+      developments is the rise of quantum computing...
+    `
   },
   {
-    id: 2,
-    title: "The Future of Technology",
-    content: "Here is the full content of the blog post about technology's future.",
-    image: "https://i.ytimg.com/vi/t46W-vnWJYA/sddefault.jpg",
-  },
-  {
-    id: 3,
-    title: "A Guide to Remote Work",
-    content: "Here is the full content of the blog post about remote work.",
-    image: "https://manilarecruitment.com/wp-content/uploads/2021/11/Manila-Recruitment-Info34Banner-800x400-1.png",
+    id: '2',
+    title: 'Sustainable Living: How Tech is Changing the Game',
+    author: 'Jane Smith',
+    date: 'October 1, 2024',
+    image: 'https://images.unsplash.com/photo-1551446591-142875a901a1',
+    content: `
+      As the world faces environmental challenges, technology is playing a crucial role
+      in creating sustainable solutions. From renewable energy sources to smart cities,
+      the integration of tech in sustainability is reshaping how we live...
+    `
   },
 ];
 
 const BlogDetails = () => {
+  // Get the blog ID from the URL using react-router's useParams
   const { id } = useParams();
-  const post = blogPosts.find((post) => post.id === parseInt(id));
 
-  if (!post) {
-    return <p>Blog post not found.</p>;
+  // Find the blog post that matches the ID
+  const blog = blogPosts.find(post => post.id === id);
+
+  // If blog not found (handle case where URL might be invalid)
+  if (!blog) {
+    return (
+      <section className="h-screen flex items-center justify-center">
+        <h1 className="text-3xl font-bold text-red-500">Blog not found</h1>
+      </section>
+    );
   }
 
   return (
-    <div className="container flex flex-col justify-center items-center mx-auto py-16 px-6">
-      <h1 className="text-4xl font-bold text-sky-700 mb-8">{post.title}</h1>
-      <img
-        className="h-96 object-cover mb-8 rounded-lg"
-        src={post.image}
-        alt={post.title}
-      />
-      <p className="text-lg text-gray-700 leading-relaxed">{post.content}</p>
-    </div>
+    <section className="bg-gray-100 py-16">
+      {/* Blog Feature Image */}
+      <div className="w-full h-96 bg-cover bg-center" style={{ backgroundImage: `url(${blog.image})` }}></div>
+      
+      <div className="max-w-5xl mx-auto p-10 bg-white shadow-lg -mt-20 relative z-10 rounded-lg">
+        {/* Blog Title */}
+        <h1 className="text-5xl font-bold mb-4">{blog.title}</h1>
+        
+        {/* Author and Date */}
+        <p className="text-gray-500 text-sm mb-6">Published on {blog.date} by {blog.author}</p>
+        
+        {/* Blog Content */}
+        <div className="prose prose-lg">
+          <p>{blog.content}</p>
+        </div>
+        
+        {/* Back to Blogs button */}
+        <Link to="/blog" className="mt-8 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+          Back to Blogs
+        </Link>
+      </div>
+    </section>
   );
 };
 
